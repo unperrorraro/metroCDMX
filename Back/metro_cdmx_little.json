@@ -2,49 +2,49 @@
   {
     "estacion": "Observatorio",
     "linea": [1],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya"]
   },
   {
     "estacion": "Tacubaya",
     "linea": [1, 7, 9],
-    "transbordo": true,
-    "adyacentes": ["Observatorio", "Juanacatlan", "Patriotismo","Constituyentes","San pedro de los pinos"]
+    "transbordo": "T",
+    "adyacentes": ["Observatorio", "Juanacatlan", "Patriotismo","Constituyentes","San Pedro de los Pinos"]
   },
   {
     "estacion": "Juanacatlan",
     "linea": [1],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya", "Chapultepec"]
   },
   {
     "estacion": "Chapultepec",
     "linea": [1],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Juanacatlan", "Sevilla"]
   },
   {
     "estacion": "Sevilla",
     "linea": [1],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Chapultepec", "Insurgentes"]
   },
   {
     "estacion": "Insurgentes",
     "linea": [1],
-    "transbordo": false,
-    "adyacentes": ["Sevilla", "Cuauht:wmoc"]
+    "transbordo": "F",
+    "adyacentes": ["Sevilla", "Cuauhtemoc"]
   },
   {
     "estacion": "Cuauhtemoc",
     "linea": [1],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Insurgentes", "Balderas"]
   },
  {
     "estacion": "Balderas",
     "linea": [1,3],
-    "transbordo": true,
+    "transbordo": "T",
     "adyacentes": ["Cuauhtemoc", "Juarez","Ninos heroes"]
   },
 
@@ -53,83 +53,83 @@
   {
     "estacion": "Universidad",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Copilco"]
   },
 
   {
     "estacion": "Copilco",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Miguel Angel de Quevedo", "Universidad"]
   }, 
  {
     "estacion": "Miguel Angel de Quevedo",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Viveros", "Copilco"]
   },
   {
     "estacion": "Viveros",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Coyoacan", "Miguel Angel de Quevedo"]
   },
   {
     "estacion": "Coyoacan",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Zapata", "Viveros"]
   },
 
 {
     "estacion": "Zapata",
     "linea": [3, 12],
-    "transbordo": true,
+    "transbordo": "T",
     "adyacentes": ["Hospital 20 de Noviembre", "Parque de los Venados", "Division norte", "Coyoacan"]
   },
   {
     "estacion": "Division norte",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Zapata", "Eugenia"]
   },
  {
     "estacion": "Eugenia",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Division norte", "Etiopia"]
 
   },
 {
     "estacion": "Etiopia",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Eugenia", "Centro Medico"]
   },
   {
     "estacion": "Centro Medico",
     "linea": [3, 9],
-    "transbordo": true,
+    "transbordo": "T",
     "adyacentes": ["Chilpancingo", "Lazaro Cardenas","Etiopia","Hospital general"]
   },
  {
     "estacion": "Hospital general",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Ninos heroes", "Centro Medico"]
   },
  {
     "estacion": "Ninos heroes",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Hospital general", "Balderas"]
   },
 
 {
     "estacion": "Juarez",
     "linea": [3],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": [ "Balderas"]
   },
 
@@ -137,7 +137,7 @@
   {
     "estacion": "Barranca del Muerto",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Mixcoac"]
   },
 
@@ -147,13 +147,13 @@
   {
     "estacion": "Mixcoac",
     "linea": [7, 12],
-    "transbordo": true,
+    "transbordo": "T",
     "adyacentes": ["San Antonio", "Barranca del Muerto", "Insurgentes Sur"]
   },
   {
     "estacion": "San Antonio",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya", "Mixcoac"]
   },
 
@@ -164,27 +164,27 @@
   {
     "estacion": "San Pedro de los Pinos",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya", "San Antonio"]
   },
 
   {
     "estacion": "Constituyentes",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya", "Auditorio"]
   },
 
   {
     "estacion": "Auditorio",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Polanco", "Constituyentes"]
   },
  {
     "estacion": "Polanco",
     "linea": [7],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Auditorio"]
   },
 
@@ -195,20 +195,20 @@
   {
     "estacion": "Patriotismo",
     "linea": [9],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Tacubaya", "Chilpancingo"]
   },
   {
     "estacion": "Chilpancingo",
-    "linea": [9]
-    "transbordo": false,
+    "linea": [9],
+    "transbordo": "F",
     "adyacentes": ["Patriotismo", "Centro Medico"]
   },
 
   {
     "estacion": "Lazaro Cardenas",
     "linea": [9],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": [ "Centro Medico"]
   },
 
@@ -219,32 +219,31 @@
   {
     "estacion": "Insurgentes Sur",
     "linea": [12],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Mixcoac", "Hospital 20 de Noviembre"]
   },
   {
     "estacion": "Hospital 20 de Noviembre",
     "linea": [12],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Insurgentes Sur", "Zapata"]
   },
   
   {
     "estacion": "Parque de los Venados",
     "linea": [12],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Zapata", "Eje Central"]
   },
   {
     "estacion": "Eje Central",
     "linea": [12],
-    "transbordo": false,
+    "transbordo": "F",
     "adyacentes": ["Parque de los Venados"]
-  },
+  }
 
 
 
 
 
 ]
-

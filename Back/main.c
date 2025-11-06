@@ -18,12 +18,12 @@ void skip_spaces(FILE *fptr, int *c) {
 
 void formatear_estacion(estacion *est){
 
-  printf("Nombre : %s \n Líneas : [ %d, %d, %d ] \n transbordo : %d \n numero adyacentes:  %d\n",est->nombre, est->lineas[0] , est->lineas[1] , est->lineas[2],est->transbordo,est->num_ady );
+  printf("Nombre : %s| \n Líneas : [ %d, %d, %d ] \n transbordo : %d \n numero adyacentes:  %d\n",est->nombre, est->lineas[0] , est->lineas[1] , est->lineas[2],est->transbordo,est->num_ady );
 }
 void formatear_estacion2(estacion *est){
 
-  printf("Nombre : %s \n Líneas : [ %d, %d, %d ] \n transbordo : %d \n numero adyacentes:  %d\n  adyacentes : ["
-         ,est->nombre, est->lineas[0] , est->lineas[1] , est->lineas[2],est->transbordo,est->num_ady);
+  printf("Nombre : %s| \n Puntero : %p \n Líneas : [ %d, %d, %d ] \n transbordo : %d \n numero adyacentes:  %d\n  adyacentes : ["
+         ,est->nombre,est, est->lineas[0] , est->lineas[1] , est->lineas[2],est->transbordo,est->num_ady);
   for (int i = 0;i < est->num_ady;i ++) {
     printf("\n \t %s -> %p,",(est->adyacentes[i])->nombre,est->adyacentes[i]);
   }
@@ -35,7 +35,9 @@ void formatear_estacion2(estacion *est){
 int esta_en_estaciones(const char* nombre , estacion** estaciones){
   
   for (int i = 0;i < NUM_EST;i ++) {
-    if(strcmp(nombre, estaciones[i]->nombre) == 0){return i;}
+    if(strcmp(nombre, estaciones[i]->nombre) == 0){
+     
+      return i;}
   }
   return -1;
 
@@ -174,10 +176,10 @@ int main(int argc, char *argv[]) {
                     int i_ady = 0;
                     while ((c = getc(fptr)) != EOF) {
                         if (c == '"') {
-                            char name[64];
+                            char name[128];
                             int nlen = 0;
                             while ((c = getc(fptr)) != EOF && c != '"') {
-                                if (nlen < 63) name[nlen++] = c;
+                                if (nlen < 127) name[nlen++] = c;
                             }
                             name[nlen] = '\0';
                             if (!first) printf(", ");
@@ -206,17 +208,16 @@ int main(int argc, char *argv[]) {
             // Leer coma o cierre
             c = getc(fptr);
             skip_spaces(fptr, &c);
-      printf("%c  22\t",c);
             if (c == ','){continue;}
             if (c == '}') {break;}
         }
 
             c = getc(fptr);
         skip_spaces(fptr, &c);
-      printf("%c  33\t",c);
         if (c == ',') continue;
-        if (c == ']') {for (int j = 0; j < NUM_EST; j++) { formatear_estacion(estaciones_array[j]);
-        }break;}
+        if (c == ']') {
+      //for (int j = 0; j < NUM_EST; j++) { formatear_estacion(estaciones_array[j]);}
+      break;}
     }
   // Segunda vuelta para que funcione adyacentes
     rewind(fptr);
@@ -232,7 +233,7 @@ int main(int argc, char *argv[]) {
         estacion_num++;
 
 
-        printf("\n=== Estación %d ===\n", estacion_num);
+     //   printf("\n=== Estación %d ===\n", estacion_num);
 
         while ((c = getc(fptr)) != EOF) {
             skip_spaces(fptr, &c);
@@ -263,19 +264,19 @@ int main(int argc, char *argv[]) {
                         fprintf(stderr, "ERROR: adyacentes debe ser lista\n");
                         exit(EXIT_FAILURE);
                     }
-                    printf("Adyacentes: ");
+                   // printf("Adyacentes: ");
                     int first = 1;
                     int i_ady = 0;
                     while ((c = getc(fptr)) != EOF) {
                         if (c == '"') {
-                            char name[64];
+                            char name[128];
                             int nlen = 0;
                             while ((c = getc(fptr)) != EOF && c != '"') {
-                                if (nlen < 63) name[nlen++] = c;
+                                if (nlen < 127) name[nlen++] = c;
                             }
                             name[nlen] = '\0';
-                            if (!first) printf(", ");
-                            printf("%s", name);
+                          //  if (!first) printf(", ");
+                          //  printf("%s", name);
                             int index = esta_en_estaciones(name,estaciones_array);
                             if(index == -1){printf("ERROR");}
                             est->adyacentes[i_ady] = estaciones_array[index];
@@ -284,7 +285,6 @@ int main(int argc, char *argv[]) {
                         }
                         if (c == ']'){ break;}
                     }
-                    printf("\n");
                     break;
                 }
 
